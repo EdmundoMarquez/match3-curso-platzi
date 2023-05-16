@@ -1,0 +1,16 @@
+{
+    "name": "Match3.Grid",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a792f418b89bbb840af3748a7b83d541"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
