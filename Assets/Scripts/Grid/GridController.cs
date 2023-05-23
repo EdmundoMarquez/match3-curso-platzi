@@ -1,23 +1,31 @@
 namespace Match3.Grid
 {
     using UnityEngine;
-    using Match3.Pieces;
     
     public class GridController : MonoBehaviour 
     {
         [SerializeField] private int _width;
         [SerializeField] private int _height;  
         [SerializeField] private GameObject _tileTemplate; 
+        [SerializeField] private PiecesSwaper _piecesSwaper = null;
         [SerializeField] private GameObject[] _availablePieces;
         [Space(10)] [Header("Camera Configurations")]
         [SerializeField] private float _cameraSizeOffset;
         [SerializeField] private float _cameraVerticalOffset;
+        public Tile[,] Tiles;
+        public Piece[,] Pieces;
+        
 
         private void Start() 
         {
+            Tiles = new Tile[_width, _height];
+            Pieces = new Piece[_width, _height];
+
             GenerateBoard();
             CenterCamera();
             GeneratePieces();
+
+            _piecesSwaper.Init(Pieces, _width, _height);
         }
 
         private void GenerateBoard()
@@ -27,7 +35,8 @@ namespace Match3.Grid
                 for (int y = 0; y < _height; y++)
                 {
                     var tile = Instantiate(_tileTemplate, new Vector2(x,y), Quaternion.identity, transform);
-                    tile.GetComponent<Tile>()?.Init(x,y,this);
+                    Tiles[x,y] = tile.GetComponent<Tile>();
+                    Tiles[x,y]?.Init(x,y,_piecesSwaper);
                 }
             }
         }
@@ -52,8 +61,9 @@ namespace Match3.Grid
                 for (int y = 0; y < _height; y++)
                 {
                     var pieceToGenerate = _availablePieces[Random.Range(0, _availablePieces.Length)];
-                    var tile = Instantiate(pieceToGenerate, new Vector2(x,y), Quaternion.identity, transform);
-                    tile.GetComponent<Piece>()?.Init(x,y);
+                    var piece = Instantiate(pieceToGenerate, new Vector2(x,y), Quaternion.identity, transform);
+                    Pieces[x,y] = piece.GetComponent<Piece>();
+                    Pieces[x,y]?.Init(x,y,this);
                 }
             }
         }
@@ -64,5 +74,7 @@ namespace Match3.Grid
             CenterCamera();
         }
         #endif
+
+        
     }
 }

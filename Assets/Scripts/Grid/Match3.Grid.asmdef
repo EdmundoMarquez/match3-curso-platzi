@@ -1,7 +1,9 @@
 {
-    "name": "Match3.Pieces",
+    "name": "Match3.Grid",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:3eec8e57432a54d44a5f58ee3d71e8c3"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -1,4 +1,4 @@
-namespace Match3.Pieces
+namespace Match3.Grid
 {
     public enum PieceTypes
     {
