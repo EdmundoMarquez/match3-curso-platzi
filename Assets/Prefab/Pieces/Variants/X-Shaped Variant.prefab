@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8872707484167950181, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_Name
-      value: X-Shaped
+      value: X-Shaped Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8872707484167950182, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: _pieceType
@@ -18,7 +18,11 @@ PrefabInstance:
     - target: {fileID: 8872707484167950183, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1959981050, guid: 17d8836d8bedd6c46890bc4fbca81ec0, type: 3}
+      objectReference: {fileID: -1187684200, guid: 5a045ed4813d78f498c25b21a1dbc5ef, type: 3}
+    - target: {fileID: 8872707484167950183, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 73e9cbf4180270e4ea220978058953cb, type: 2}
     - target: {fileID: 8872707484167950184, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_RootOrder
       value: 0

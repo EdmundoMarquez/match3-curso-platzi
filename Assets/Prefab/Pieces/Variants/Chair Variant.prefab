@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8872707484167950181, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_Name
-      value: Chair
+      value: Chair Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8872707484167950182, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: _pieceType
@@ -18,7 +18,7 @@ PrefabInstance:
     - target: {fileID: 8872707484167950183, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1484060164, guid: 17d8836d8bedd6c46890bc4fbca81ec0, type: 3}
+      objectReference: {fileID: -397685695, guid: 5a045ed4813d78f498c25b21a1dbc5ef, type: 3}
     - target: {fileID: 8872707484167950184, guid: 72420baf14600ad428fd6292c3a0e9ec, type: 3}
       propertyPath: m_RootOrder
       value: 0
